@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>表单</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/commonstyle_hu.css" rel="stylesheet">
+    <link href="../css/green.css" rel="stylesheet" >
+    <link href="../css/square.css" rel="stylesheet">
+
+</head>
+<body>
+
+<h2>单选框,复选框</h2>
+<hr>
+
+<input type="checkbox">
+<input type="checkbox" checked>
+<input type="radio" name="iCheck">
+<input type="radio" name="iCheck" checked>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/icheck.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+
+<script>
+
+    $('input').iCheck({
+        checkboxClass: 'icheckbox_square-green',
+        radioClass: 'iradio_square-green',
+        increaseArea: '20%' //可选
+    });
+</script>
+</body>
+</html>

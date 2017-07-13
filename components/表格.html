@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>表格组件</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/commonstyle_hu.css" rel="stylesheet">
+    <link href="../css/green.css" rel="stylesheet">
+    <link href="../css/square.css" rel="stylesheet">
+    <style>
+
+    </style>
+
+</head>
+<body>
+<h2>表格1</h2>
+<hr>
+<table class="table table-bordered table-striped table-center">
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>用户名</th>
+        <th>姓名</th>
+        <th>部门</th>
+        <th>选择</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Anna</td>
+        <td>Anna</td>
+        <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Anna</td>
+        <td>Anna</td>
+        <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Anna</td>
+        <td>Anna</td>
+        <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Anna</td>
+        <td>Anna</td>
+        <td><input type="checkbox"></td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>表格2</h2>
+<hr>
+
+
+<table class="table table-bordered table-striped table-center table-top-border" >
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>用户名</th>
+        <th>姓名</th>
+        <th>部门</th>
+        <th>选择</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Anna</td>
+        <td>Anna</td>
+        <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Anna</td>
+        <td>Anna</td>
+        <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Anna</td>
+        <td>Anna</td>
+        <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Anna</td>
+        <td>Anna</td>
+        <td><input type="checkbox"></td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>表格类代表的意思</h2>
+<hr>
+table-center：表头，表格内的数据居中对齐
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../js/jquery-3.2.1.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+
+<script src="../js/icheck.min.js"></script>
+<script>
+    $('input').iCheck({
+        checkboxClass: 'icheckbox_square-green',
+        radioClass: 'iradio_square-green',
+        increaseArea: '20%' //可选
+    });
+</script>
+</body>
+</html>
