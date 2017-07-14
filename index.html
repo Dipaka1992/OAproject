@@ -9,15 +9,21 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/commonstyle_hu.css">
+    <link href="css/green.css" rel="stylesheet">
+    <link href="css/square.css" rel="stylesheet">
+
+    <link href="css/layui.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
     <![endif]-->
 </head>
 <body>
+<!--导航开始-->
 <div id="nav">
     <a href="#">
         <div class="logo"></div>
@@ -31,9 +37,244 @@
 </div>
 <!--导航结束-->
 
+<!--导航开始-->
+<div id="navBox">
+    <ul>
+        <li><a href="#" class="active">首页</a></li>
+        <li><a href="#">个人办公</a></li>
+        <li><a href="#">流程</a></li>
+        <li><a href="#">资源</a></li>
+        <li><a href="#">任务</a></li>
+        <li><a href="#">客户</a></li>
+        <li><a href="#">人事考勤</a></li>
+        <li><a href="#">行政</a></li>
+        <li><a href="#">流程模块</a></li>
+        <li><a href="#">系统</a></li>
+    </ul>
+</div>
+<!--导航结束-->
+
+
+<div class="container-fluid">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+        <!--面包屑开始-->
+        <ol id="Bread" class="breadcrumb">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">系统</a></li>
+            <li class="active">组织结构</li>
+        </ol>
+        <!--面包屑结束-->
+        <table class="table table-bordered table-striped table-center table-top-border">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>用户名</th>
+                <th>姓名</th>
+                <th>部门</th>
+                <th>选择</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Anna</td>
+                <td>Anna</td>
+                <td>Anna</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Anna</td>
+                <td>Anna</td>
+                <td>Anna</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Anna</td>
+                <td>Anna</td>
+                <td>Anna</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Anna</td>
+                <td>Anna</td>
+                <td>Anna</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div id="demo5"></div>
+
+        <blockquote class="layui-elem-quote">
+            切换分页后看地址栏的变化（#后面的fenye名字可以随便定义），该功能对于单页应用有着极大的帮助
+        </blockquote>
+
+        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+            <legend>只显示上一页、下一页</legend>
+        </fieldset>
+
+        <div id="demo6"></div>
+
+        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+            <legend>07.是时候看一下完整功能了！</legend>
+        </fieldset>
+
+        <div id="demo7"></div>
+
+
+    </div>
+</div>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-3.2.1.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/icheck.min.js"></script>
+
+<script src="js/layui.all.js" ></script>
+<script>
+
+
+
+
+    layui.use(['laypage', 'layer'], function () {
+        var laypage = layui.laypage
+            , layer = layui.layer;
+
+        laypage({
+            cont: 'demo1'
+            , pages: 100 //总页数
+            , groups: 5 //连续显示分页数
+        });
+
+        laypage({
+            cont: 'demo2'
+            , pages: 100
+            , skin: '#1E9FFF'
+        });
+
+        laypage({
+            cont: 'demo3'
+            , pages: 100
+            , first: 1
+            , last: 100
+            , prev: '<em><</em>'
+            , next: '<em>></em>'
+        });
+
+        laypage({
+            cont: 'demo4'
+            , pages: 100
+            , first: false
+            , last: false
+        });
+
+        laypage({
+            cont: 'demo5'
+            , pages: 100
+            , curr: location.hash.replace('#!fenye=', '') //获取hash值为fenye的当前页
+            , hash: 'fenye' //自定义hash值
+        });
+
+        laypage({
+            cont: 'demo6'
+            , pages: 5
+            , groups: 0
+            , first: false
+            , last: false
+            , jump: function (obj, first) {
+                if (!first) {
+                    layer.msg('第 ' + obj.curr + ' 页');
+                }
+            }
+        });
+
+        laypage({
+            cont: 'demo7'
+            , pages: 100
+            , skip: true
+        });
+
+
+        //将一段数组分页展示
+
+        //测试数据
+        var data = [
+            '北京',
+            '上海',
+            '广州',
+            '深圳',
+            '杭州',
+            '长沙',
+            '合肥',
+            '宁夏',
+            '成都',
+            '西安',
+            '南昌',
+            '上饶',
+            '沈阳',
+            '济南',
+            '厦门',
+            '福州',
+            '九江',
+            '宜春',
+            '赣州',
+            '宁波',
+            '绍兴',
+            '无锡',
+            '苏州',
+            '徐州',
+            '东莞',
+            '佛山',
+            '中山',
+            '成都',
+            '武汉',
+            '青岛',
+            '天津',
+            '重庆',
+            '南京',
+            '九江',
+            '香港',
+            '澳门',
+            '台北'
+        ];
+
+        var nums = 5; //每页出现的数据量
+
+        //模拟渲染
+        var render = function (data, curr) {
+            var arr = []
+                , thisData = data.concat().splice(curr * nums - nums, nums);
+            layui.each(thisData, function (index, item) {
+                arr.push('<li>' + item + '</li>');
+            });
+            return arr.join('');
+        };
+
+        //调用分页
+        laypage({
+            cont: 'demo8'
+            , pages: Math.ceil(data.length / nums) //得到总页数
+            , jump: function (obj) {
+                document.getElementById('biuuu_city_list').innerHTML = render(data, obj.curr);
+            }
+        });
+
+    });
+
+</script>
+<script>
+    $('input').iCheck({
+        checkboxClass: 'icheckbox_square-green',
+        radioClass: 'iradio_square-green',
+        increaseArea: '20%' //可选
+    });
+</script>
+
+
 </body>
 </html>
